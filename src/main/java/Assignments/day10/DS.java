@@ -1,7 +1,7 @@
 package Assignments.day10;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -28,25 +28,40 @@ public class DS {
         //2.Create an ArrayList and add Integer values (201, 155, 325, 72, 66).
         // Find the index of 325 value. Remove member at index 1.
         // Use iterator and iterate through list.
-        Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> arr= new ArrayList<>();
-        int len=5;
-        for(int i=0;i<len;i++){
-            arr.add(i,sc.nextInt());
-        }
-        for(int j: arr){
-            System.out.println(j);
-        }
-        int location=arr.indexOf(3);
-        System.out.println(location);
-        arr.remove(1);
-        for(int j: arr){
-            System.out.println(j);
-        }
+//        Scanner sc = new Scanner(System.in);
+//        ArrayList<Integer> arr= new ArrayList<>();
+//        int len=5;
+//        for(int i=0;i<len;i++){
+//            arr.add(i,sc.nextInt());
+//        }
+//        for(int j: arr){
+//            System.out.println(j);
+//        }
+//        int location=arr.indexOf(3);
+//        System.out.println(location);
+//        arr.remove(1);
+//        for(int j: arr){
+//            System.out.println(j);
+//        }
+//
+//        Iterator iterator= arr.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
 
-        Iterator iterator= arr.iterator();
-        while (iterator.hasNext()){
-            System.out.println(iterator.next());
-        }
+        //3Create a LinkedList and add few Character values (‘U’, ‘E’, ‘I’, ‘A’, ‘O’). Check if the list is empty or not.
+        // Use list iterator and iterate through list in the reverse order. Clear the list and check the size of the list.
+        LinkedList<Character> l=new LinkedList<>();
+        l.add('U');
+        l.add('E');
+        l.add('I');
+        l.add('A');
+        l.add('O');
+        if(l.isEmpty())
+            System.out.println("list is empty");
+
+        ListIterator iterator= l.listIterator(l.size());
+        while (iterator.hasPrevious())
+            System.out.println(iterator.previous());
     }
 }
