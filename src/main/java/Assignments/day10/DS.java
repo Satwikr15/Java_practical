@@ -51,17 +51,32 @@ public class DS {
 
         //3Create a LinkedList and add few Character values (‘U’, ‘E’, ‘I’, ‘A’, ‘O’). Check if the list is empty or not.
         // Use list iterator and iterate through list in the reverse order. Clear the list and check the size of the list.
-        LinkedList<Character> l=new LinkedList<>();
-        l.add('U');
-        l.add('E');
-        l.add('I');
-        l.add('A');
-        l.add('O');
-        if(l.isEmpty())
-            System.out.println("list is empty");
+//        LinkedList<Character> l=new LinkedList<>();
+//        l.add('U');
+//        l.add('E');
+//        l.add('I');
+//        l.add('A');
+//        l.add('O');
+//        if(l.isEmpty())
+//            System.out.println("list is empty");
+//
+//        ListIterator iterator= l.listIterator(l.size());
+//        while (iterator.hasPrevious())
+//            System.out.println(iterator.previous());
 
-        ListIterator iterator= l.listIterator(l.size());
-        while (iterator.hasPrevious())
-            System.out.println(iterator.previous());
+        //4.Create a LinkedHashSet with values (5, 185, 63, 48, 247, 128, 185, 48).
+        // Use for each loop to iterate through the set values.
+        LinkedHashSet<Integer> l=new LinkedHashSet<>();
+        l.add(5);
+        l.add(185);
+        l.add(63);
+        l.add(48);
+        l.add(247);
+        l.add(128);
+        l.add(185);
+        l.add(48);
+        for(int i:l) {
+            System.out.println(l);
+        }
     }
 }
